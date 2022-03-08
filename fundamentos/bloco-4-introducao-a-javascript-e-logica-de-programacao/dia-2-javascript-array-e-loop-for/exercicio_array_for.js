@@ -4,4 +4,5 @@ let soma = 0;
 for (index of numbers){
     soma = soma + index;
 }
-console.log(soma);
+mediaAritm = soma / numbers.length;
+console.log(mediaAritm);
