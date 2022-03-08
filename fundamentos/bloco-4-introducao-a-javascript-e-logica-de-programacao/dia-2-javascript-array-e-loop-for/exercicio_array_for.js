@@ -5,4 +5,9 @@ for (index of numbers){
     soma = soma + index;
 }
 mediaAritm = soma / numbers.length;
-console.log(mediaAritm);
+if (mediaAritm > 20){
+    console.log('valor maior que 20');
+} 
+else {
+    console.log('valor menor ou igual a 20');
+}
