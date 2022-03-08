@@ -1,16 +1,6 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let meuArray = [];
 
-let Numero = 0;
-
-for (index of numbers){
-     if (index > Numero){
-        Numero = index;
-    }    
+for (index = 1 ; index <= 25; index +=1){
+    meuArray.push(index);
 }
-for (index of numbers){
-    if (index < Numero){
-       Numero = index;
-   }    
-}
-console.log(Numero); 
-
+console.log(meuArray);
