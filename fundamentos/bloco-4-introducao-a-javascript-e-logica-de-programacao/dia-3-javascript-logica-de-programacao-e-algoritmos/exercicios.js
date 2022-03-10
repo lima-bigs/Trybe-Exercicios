@@ -44,23 +44,17 @@ console.log('A menor palavra é: ' + menorPalavra);
 //Ex 4
 
 let ultimoNumero = 50;
-let numeroDaVez = 0;
 let maiorPrimo = 0;
-let numeroMenor = 0
 let count = 0;
-let i = 0;
-let z = 0;
 
-for (let i = 2; i <= ultimoNumero ; i += 1){
-    numeroDaVez = i;
-    for (z = 2; z < numeroDaVez; z += 1){
-        numeroMenor = z;
-        if (numeroDaVez % numeroMenor == 0){
+for (i = 2; i <= ultimoNumero ; i += 1){
+    for (z = 2; z < i; z += 1){
+        if (i % z == 0){
             count += 1;
         }
     }
     if (count == 0){
-        maiorPrimo = numeroDaVez;
+        maiorPrimo = i;
     }
     count = 0;  
 }
