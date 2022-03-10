@@ -8,7 +8,7 @@ let info = {
   console.log('Bem-vinda, '+ info.personagem);
   */
 
-  //Ex 2
+  //Ex 2 e 3
 
   let info = {
     personagem: 'Margarida',
@@ -17,6 +17,10 @@ let info = {
     recorrente: 'Sim'
   }
 
-  for (let i in info){
-      console.log(i);
-  }
+ for (let i in info){
+//Ex 3   console.log(i);
+// }
+
+  //Ex 4 
+  //console.log(info[i]);
+ //}
