@@ -15,7 +15,7 @@ function verificaPalindrome (word = ''){
 console.log(verificaPalindrome('nossa'));
 */
 
-//Ex 2
+/*Ex 2
 
 function indexHighestValue (array = []){
     let highestValue = array [0];
@@ -28,5 +28,21 @@ function indexHighestValue (array = []){
 }
 
 console.log(indexHighestValue([2, 3, 6, 7, 10, 1]));
+
+//*/
+
+//Ex 3
+
+function indexLowestValue (array = []){
+    let lowestValue = array [0];
+    for (let index of array){
+        if (index < lowestValue){
+            lowestValue = index;
+        }
+    }
+    return array.indexOf(lowestValue);
+}
+
+console.log(indexLowestValue([2, 4, 6, 7, 10, 0, -3]));
 
 //*/
