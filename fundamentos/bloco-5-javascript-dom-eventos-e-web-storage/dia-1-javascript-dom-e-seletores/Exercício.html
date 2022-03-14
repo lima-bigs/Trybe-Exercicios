@@ -58,17 +58,16 @@
        document.getElementsByTagName('p')[0].innerText = 'Dentro de 2 anos gostaria de estar vivendo de forma nômade e trabalhando remotamente.';
        
        //Ex 2
-       document.getElementsByTagName('main')[0].style.backgroundColor = 'rgb(76,164,109)';
-       
+       document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,109)';
+       //document.getElementsByTagName('main')[0].style.backgroundColor = 'rgb(76,164,109)';
+
        //Ex 3
        document.getElementsByTagName('section')[0].style.backgroundColor = 'white';
       
        //Ex 4
-       //  document.getElementsByClassName('.title')[0].innerHTML = 'Exercícios 5.1 - JavaScript';
-       document.getElementsByTagName('h1')[0].innerHTML = 'Exercícios 5.1 - JavaScript';
-
+         document.getElementsByClassName('title')[0].innerHTML = 'Exercícios 5.1 - JavaScript';
+       
        //Ex 5
-       //document.getElementsByTagName('p')[0].innerText = document.getElementsByTagName("p")[0].innerText.toUpperCase();
        for (let i of document.getElementsByTagName('p')){
           i.innerText = i.innerText.toUpperCase();
         }
