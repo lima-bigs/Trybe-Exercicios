@@ -62,7 +62,7 @@ function bigestName (array = ['']){
 console.log(bigestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
 */
 
-//Ex 5
+/*Ex 5
 let repetition = 0;
 let arrayRepetition = [];
 
@@ -93,3 +93,16 @@ function quemMaisSeRepete (array = []){
     return numeroQueMaisAparece;
 }
 console.log(quemMaisSeRepete([5, 3, 2, 5, 8, 5, 5]));
+*/
+
+//Ex 6
+
+function somaAteN(n = 0){
+
+    sum = 0;
+    for (let i = n; i >= 1; i -=1){
+        sum = sum + i;
+    }
+    return sum;
+}
+console.log(somaAteN(4));
