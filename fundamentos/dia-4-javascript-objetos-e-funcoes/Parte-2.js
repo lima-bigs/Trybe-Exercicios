@@ -47,7 +47,7 @@ console.log(indexLowestValue([2, 4, 6, 7, 10, 0, -3]));
 
 //*/
 
-//Ex 4
+/*Ex 4
 
 function bigestName (array = ['']){
     let name = array [0];
@@ -60,3 +60,36 @@ function bigestName (array = ['']){
 }
 
 console.log(bigestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+*/
+
+//Ex 5
+let repetition = 0;
+let arrayRepetition = [];
+
+function quemMaisSeRepete (array = []){
+    let numero = array [0];
+    for (let index of array){
+        for (let index2 of array){
+            if (index2 === index){
+                repetition += 1;
+            }        
+        }
+        arrayRepetition.push(repetition);
+        repetition = 0
+    }
+    console.log(arrayRepetition);
+    let highestValue = arrayRepetition [0];
+    let indexHighestValue = 0;
+    for (let index of arrayRepetition){
+        if ( index > highestValue ){
+            highestValue = index;
+            indexHighestValue = arrayRepetition[index];
+            console.log(highestValue, 'no if'); 
+        }
+    }
+    console.log('----------')
+    numeroQueMaisAparece = array[indexHighestValue];
+    console.log(highestValue);
+    return numeroQueMaisAparece;
+}
+console.log(quemMaisSeRepete([5, 3, 2, 5, 8, 5, 5]));
