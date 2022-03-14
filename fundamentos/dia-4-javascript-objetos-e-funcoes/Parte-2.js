@@ -95,7 +95,7 @@ function quemMaisSeRepete (array = []){
 console.log(quemMaisSeRepete([5, 3, 2, 5, 8, 5, 5]));
 */
 
-//Ex 6
+/*Ex 6
 
 function somaAteN(n = 0){
 
@@ -106,3 +106,17 @@ function somaAteN(n = 0){
     return sum;
 }
 console.log(somaAteN(4));
+*/
+
+//Ex 7
+
+function verificaFimPalavra(word = '', ending = ''){
+
+    for (let i = 1 ; i <= ending.length ; i += 1){
+        if (word[word.length - i] !== ending[ending.length - i]){
+            return false;
+        }
+    }
+    return true;
+}
+console.log(verificaFimPalavra('amanhã', 'manhã'));
