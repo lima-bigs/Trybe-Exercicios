@@ -124,7 +124,35 @@
         document.getElementsByTagName('h3').className = 'description';
 
     //Ex 3
-        document.querySelector('main').removeChild('.left-content');
+        let auxMain = document.querySelector('main');
+        let auxLeftContent = document.querySelector('.left-content');
+        auxMain.removeChild(auxLeftContent);
+
+    //Ex 4
+        let auxPosicionar = document.getElementsByClassName('right-content')[0];
+        auxPosicionar.style.marginRight = 'auto';
+
+    //Ex 5
+        let auxColor = document.getElementsByClassName('center-content')[0];    
+        auxColor.style.background = 'green';
+
+    //Ex 6
+        let removeNumbers = ['nove','dez'];
+        //document.querySelector('ul')
+        for (let index of removeNumbers){
+            for (let index2 of numbers){
+                if (index2 = index){
+                    let aux = numbers.indexOf(index);
+                    console.log(aux);
+                    console.log(index2 +'---'+index);
+                    let lista = document.querySelector('ul');
+                    console.log(lista);
+                    lista.removeChild(aux);
+                }
+            }
+        }
+
+
 
     </script>
   </body>
