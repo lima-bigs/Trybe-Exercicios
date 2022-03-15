@@ -99,6 +99,17 @@
         image.className = 'small-image';
         document.querySelector('.left-content').appendChild(image);
 
+    //Ex 8
+        let list = document.createElement('ul');
+        document.querySelector('.right-content').appendChild(list);
+        let numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+        //let numbersList = document.querySelector
+        for (let index of numbers){
+            let criaNumbers = document.createElement('li');
+            criaNumbers.innerText = index;
+            document.querySelector('ul').appendChild(criaNumbers);
+        }
+        
     </script>
   </body>
 </html>
