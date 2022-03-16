@@ -107,6 +107,7 @@
         for (let index of numbers){
             let criaNumbers = document.createElement('li');
             criaNumbers.innerText = index;
+            criaNumbers.className = 'numerosNaLista';
             document.querySelector('ul').appendChild(criaNumbers);
         }
     
@@ -137,22 +138,23 @@
         auxColor.style.background = 'green';
 
     //Ex 6
-        let removeNumbers = ['nove','dez'];
-        //document.querySelector('ul')
-        for (let index of removeNumbers){
-            for (let index2 of numbers){
-                if (index2 = index){
-                    let aux = numbers.indexOf(index);
-                    console.log(aux);
-                    console.log(index2 +'---'+index);
-                    let lista = document.querySelector('ul');
-                    console.log(lista);
-                    lista.removeChild(aux);
-                }
-            }
-        }
-
-
+         var removeNumbers = ['nove','dez'];
+         var lista = document.getElementsByClassName('numerosNaLista')
+         var listaOriginal = document.querySelector('ul');
+        // for (let index of removeNumbers){
+        //     for (let index2 = 0; index2 <= listaOriginal.length; index2 += 1 ){
+        //         let numeroDaVez = listaOriginal[index2];
+        //         console.log(numeroDaVez +'>>>>'+index);
+        //         if (numeroDaVez.innerText.includes(index)){
+        //             //console.log(aux);
+        //             console.log(index2 +'---'+index);
+        //             //console.log(lista);
+        //             listaOriginal.removeChild(numeroDaVez);
+        //         }
+        //     }
+        // }
+        listaOriginal.lastChild.remove();
+        listaOriginal.lastChild.remove();
 
     </script>
   </body>
