@@ -138,9 +138,14 @@
         auxColor.style.background = 'green';
 
     //Ex 6
-         var removeNumbers = ['nove','dez'];
-         var lista = document.getElementsByClassName('numerosNaLista')
-         var listaOriginal = document.querySelector('ul');
+         let removeNumbers = ['nove','dez'];
+         let lista = document.getElementsByClassName('numerosNaLista')
+         let listaOriginal = document.querySelector('ul');
+         console.log('lista ', lista);
+         console.log('listaOriginal ', listaOriginal);
+         let num = lista[9];
+         num.remove();
+         //lista.remove(num);
         // for (let index of removeNumbers){
         //     for (let index2 = 0; index2 <= listaOriginal.length; index2 += 1 ){
         //         let numeroDaVez = listaOriginal[index2];
@@ -153,8 +158,8 @@
         //         }
         //     }
         // }
-        listaOriginal.lastChild.remove();
-        listaOriginal.lastChild.remove();
+        // listaOriginal.lastChild.remove();
+        // listaOriginal.lastChild.remove();
 
     </script>
   </body>
