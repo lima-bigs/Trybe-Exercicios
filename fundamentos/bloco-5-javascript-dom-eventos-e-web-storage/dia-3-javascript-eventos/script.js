@@ -14,8 +14,9 @@ function createDaysOfTheWeek() {
   createDaysOfTheWeek();
   
   // Ex 1
+
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-  const listaDias = document.querySelector('days');
+  const listaDias = document.querySelector('#days');
   for (let index of dezDaysList){
     let dia = document.createElement('li');
     dia.innerText = index;
@@ -28,3 +29,17 @@ function createDaysOfTheWeek() {
     }
     listaDias.appendChild(dia);
   }
+
+  // Ex 2
+
+  function criaBotao(nomeBotao){
+    //let auxbotao = document.getElementsByClassName('buttons-container');
+    let auxbotao = document.querySelector('.buttons-container');
+    let botao = document.createElement('button');
+    botao.id = 'btn-holiday';
+    botao.innerHTML = nomeBotao;
+    console.log(botao);
+    console.log(auxbotao);
+    auxbotao.appendChild(botao);
+  }
+  criaBotao('Feriados');
