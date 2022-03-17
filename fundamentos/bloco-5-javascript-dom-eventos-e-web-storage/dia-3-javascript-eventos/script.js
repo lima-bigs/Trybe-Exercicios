@@ -33,13 +33,29 @@ function createDaysOfTheWeek() {
   // Ex 2
 
   function criaBotao(nomeBotao){
-    //let auxbotao = document.getElementsByClassName('buttons-container');
     let auxbotao = document.querySelector('.buttons-container');
     let botao = document.createElement('button');
     botao.id = 'btn-holiday';
     botao.innerHTML = nomeBotao;
-    console.log(botao);
-    console.log(auxbotao);
     auxbotao.appendChild(botao);
   }
-  criaBotao('Feriados');
+
+  // Ex 3
+
+  function clickFeriadoCor(){
+      let botao = document.querySelector('#btn-holiday');
+      let diasFeriados = document.getElementsByClassName('holiday');
+      let corOriginal = 'rgb(238,238,238)';
+      let novaCor = 'yellow';
+
+      botao.addEventListener('click', function(){
+        if (diasFeriados.style.background == corOriginal){
+            diasFeriados.style.background = novaCor;    
+        }
+        else {
+            diasFeriados.style.background = corOriginal;
+        }
+      });
+  };
+
+  clickFeriadoCor();
