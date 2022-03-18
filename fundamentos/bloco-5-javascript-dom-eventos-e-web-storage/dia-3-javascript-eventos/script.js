@@ -73,3 +73,32 @@ function criaBotaoFriday(nomeBotao) {
 };
 
 criaBotaoFriday('Sexta-feira');
+
+// Ex 5
+
+function clickSexta() {
+    let botao = document.querySelector('#btn-friday');
+    let diasDeSexta = document.getElementsByClassName('friday');
+
+    botao.addEventListener('click', function () {
+        for (let index = 0; index < diasDeSexta.length; index += 1) {
+            if (diasDeSexta[index].innerText !== 'Sextou!') {
+                diasDeSexta[index].innerText = 'Sextou!';
+            } else if (index === 0){
+                diasDeSexta[index].innerText = '4';
+            } else if (index === 1){
+                diasDeSexta[index].innerText = '11';
+            } else if (index === 2){
+                diasDeSexta[index].innerText = '18';
+            } else if (index === 3){
+                diasDeSexta[index].innerText = '25';
+            }
+        }
+    });
+};
+
+clickSexta();
+
+// Ex 6
+
+
