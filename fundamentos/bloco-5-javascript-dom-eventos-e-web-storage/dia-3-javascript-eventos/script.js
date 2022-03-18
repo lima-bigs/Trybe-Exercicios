@@ -61,3 +61,15 @@ function clickFeriadoCor() {
 };
 
 clickFeriadoCor();
+
+// Ex 4
+
+function criaBotaoFriday(nomeBotao) {
+    let auxbotao = document.querySelector('.buttons-container');
+    let botao = document.createElement('button');
+    botao.id = 'btn-friday';
+    botao.innerHTML = nomeBotao;
+    auxbotao.appendChild(botao);
+};
+
+criaBotaoFriday('Sexta-feira');
