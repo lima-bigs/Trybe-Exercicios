@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.controles{
+    position: fixed;
+    top: 0;
+    background-color: darkolivegreen;
+    width: 100%;
+}
+h1{
+    text-align: center;
+}
+.texto{
+    text-align: justify;
+    color: black;
+    font-size: 14px;
+    line-height: 160% ;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 500px 10px 10px 10px;
+
+}
