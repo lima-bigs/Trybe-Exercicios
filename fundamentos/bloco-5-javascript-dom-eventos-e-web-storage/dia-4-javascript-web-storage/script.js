@@ -162,3 +162,13 @@ function fonteArial() {
     })
 };
 fonteArial();
+
+window.onload = function () {
+    let texto = document.getElementsByClassName('texto')[0];
+    texto.style.background = localStorage.getItem('Cor-Fundo');
+    texto.style.color = localStorage.getItem('Cor-Fonte');
+    texto.style.fontSize = localStorage.getItem('Tamanho-Fonte');
+    texto.style.lineHeight = localStorage.getItem('Espaçamento-Linha');
+    texto.style.fontFamily = localStorage.getItem('Fonte');
+}
+
