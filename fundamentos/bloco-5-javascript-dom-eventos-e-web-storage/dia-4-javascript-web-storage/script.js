@@ -130,3 +130,35 @@ function espaçamentoLinha160() {
 };
 espaçamentoLinha160();
 
+function fonteCourier() {
+    let botao = document.getElementsByClassName('btn-estilo-fonte courier')[0];
+    let texto = document.getElementsByClassName('texto')[0];
+    botao.addEventListener('click', function () {
+        let escolha = 'courier';
+        texto.style.fontFamily = escolha;
+        localStorage.setItem('Fonte', escolha);
+    })
+};
+fonteCourier();
+
+function fonteLucida() {
+    let botao = document.getElementsByClassName('btn-estilo-fonte lucida')[0];
+    let texto = document.getElementsByClassName('texto')[0];
+    botao.addEventListener('click', function () {
+        let escolha = 'lucida';
+        texto.style.fontFamily = escolha;
+        localStorage.setItem('Fonte', escolha);
+    })
+};
+fonteLucida();
+
+function fonteArial() {
+    let botao = document.getElementsByClassName('btn-estilo-fonte arial')[0];
+    let texto = document.getElementsByClassName('texto')[0];
+    botao.addEventListener('click', function () {
+        let escolha = 'arial';
+        texto.style.fontFamily = escolha;
+        localStorage.setItem('Fonte', escolha);
+    })
+};
+fonteArial();
