@@ -84,13 +84,13 @@ function clickSexta() {
         for (let index = 0; index < diasDeSexta.length; index += 1) {
             if (diasDeSexta[index].innerText !== 'Sextou!') {
                 diasDeSexta[index].innerText = 'Sextou!';
-            } else if (index === 0){
+            } else if (index === 0) {
                 diasDeSexta[index].innerText = '4';
-            } else if (index === 1){
+            } else if (index === 1) {
                 diasDeSexta[index].innerText = '11';
-            } else if (index === 2){
+            } else if (index === 2) {
                 diasDeSexta[index].innerText = '18';
-            } else if (index === 3){
+            } else if (index === 3) {
                 diasDeSexta[index].innerText = '25';
             }
         }
@@ -101,4 +101,20 @@ clickSexta();
 
 // Ex 6
 
+function zoomDias() {
+    let diaZoom = document.querySelectorAll('.day');
+    for (let index of diaZoom) {
+        index.addEventListener('mouseover', function (alvo) {
+            alvo.target.style.fontSize = '30px';
+            alvo.target.style.color = 'green';
+        })
+        index.addEventListener('mouseleave', function (alvo) {
+            alvo.target.style.fontSize = '20px';
+            alvo.target.style.color = '';
+        })
+
+    }
+};
+
+zoomDias()
 
