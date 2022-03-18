@@ -107,3 +107,26 @@ function espaçamentoLinha80() {
     })
 };
 espaçamentoLinha80();
+
+function espaçamentoLinha120() {
+    let botao = document.getElementsByClassName('btn-espaçamento-linha 120')[0];
+    let texto = document.getElementsByClassName('texto')[0];
+    botao.addEventListener('click', function () {
+        let escolha = '120%';
+        texto.style.lineHeight = escolha;
+        localStorage.setItem('Espaçamento-Linha', escolha);
+    })
+};
+espaçamentoLinha120();
+
+function espaçamentoLinha160() {
+    let botao = document.getElementsByClassName('btn-espaçamento-linha 160')[0];
+    let texto = document.getElementsByClassName('texto')[0];
+    botao.addEventListener('click', function () {
+        let escolha = '160%';
+        texto.style.lineHeight = escolha;
+        localStorage.setItem('Espaçamento-Linha', escolha);
+    })
+};
+espaçamentoLinha160();
+
