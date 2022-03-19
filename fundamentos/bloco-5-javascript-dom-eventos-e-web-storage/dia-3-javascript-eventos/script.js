@@ -118,3 +118,23 @@ function zoomDias() {
 
 zoomDias()
 
+// Ex 7
+
+function adicionaTarefa(tarefa){
+    let meuSpan = document.createElement('span');
+    let recebeSpan = document.querySelector('.my-tasks');
+    meuSpan.innerHTML = tarefa;
+    recebeSpan.appendChild(meuSpan);
+};
+adicionaTarefa('cozinhar')
+
+// Ex 8
+
+function criaLegendaCor(cor){
+    let minhaDiv = document.createElement('div');
+    let recebeSpan = document.querySelector('.my-tasks');
+    minhaDiv.className = 'task';
+    minhaDiv.style.background = cor;
+    recebeSpan.appendChild(minhaDiv);
+};
+criaLegendaCor('blue')
