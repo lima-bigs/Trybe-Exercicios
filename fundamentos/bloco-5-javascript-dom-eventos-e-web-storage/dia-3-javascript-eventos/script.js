@@ -106,11 +106,15 @@ function zoomDias() {
     for (let index of diaZoom) {
         index.addEventListener('mouseover', function (alvo) {
             alvo.target.style.fontSize = '30px';
-            alvo.target.style.color = 'green';
+            if (alvo.target.style.color === ''){
+                alvo.target.style.color = 'green';
+            }
         })
         index.addEventListener('mouseleave', function (alvo) {
             alvo.target.style.fontSize = '20px';
-            alvo.target.style.color = '';
+            if (alvo.target.style.color === 'green'){
+                alvo.target.style.color = '';
+            }
         })
 
     }
@@ -155,3 +159,28 @@ function selecionaTarefa(){
     }
 };
 selecionaTarefa();
+
+// Ex 10
+
+function corCompromissoDia() {
+    let diaZoom = document.querySelectorAll('.day');
+
+    for (let index of diaZoom) {
+        index.addEventListener('click', function (alvo) {
+            let corCompromissoSelecionado = document.querySelector('.selected');
+            let corDia;
+            console.log('>>>>>>>'+corCompromissoSelecionado);
+            if (corCompromissoSelecionado !== null){
+                corDia = corCompromissoSelecionado.style.backgroundColor;
+            }
+            if (alvo.target.style.color !== corDia){
+                alvo.target.style.color = corDia;
+            } else {
+                alvo.target.style.color = '';
+            }
+        })
+    }
+};
+corCompromissoDia();
+
+
