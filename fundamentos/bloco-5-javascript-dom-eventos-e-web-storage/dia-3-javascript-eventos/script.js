@@ -116,7 +116,7 @@ function zoomDias() {
     }
 };
 
-zoomDias()
+zoomDias();
 
 // Ex 7
 
@@ -126,7 +126,7 @@ function adicionaTarefa(tarefa){
     meuSpan.innerHTML = tarefa;
     recebeSpan.appendChild(meuSpan);
 };
-adicionaTarefa('cozinhar')
+adicionaTarefa('cozinhar');
 
 // Ex 8
 
@@ -137,4 +137,21 @@ function criaLegendaCor(cor){
     minhaDiv.style.background = cor;
     recebeSpan.appendChild(minhaDiv);
 };
-criaLegendaCor('blue')
+criaLegendaCor('blue');
+
+// Ex 9
+
+function selecionaTarefa(){
+    let tarefa = document.getElementsByClassName('task');
+    for (let index of tarefa) {
+        index.addEventListener('click', function (alvo) {
+            console.log(index.classList);
+            if (index.className === 'task selected'){
+                alvo.target.classList.remove('selected');
+            } else {
+                alvo.target.classList.add('selected');
+            }
+        })
+    }
+};
+selecionaTarefa();
