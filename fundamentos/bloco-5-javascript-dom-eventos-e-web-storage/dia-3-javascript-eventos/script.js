@@ -106,13 +106,13 @@ function zoomDias() {
     for (let index of diaZoom) {
         index.addEventListener('mouseover', function (alvo) {
             alvo.target.style.fontSize = '30px';
-            if (alvo.target.style.color === ''){
+            if (alvo.target.style.color === '') {
                 alvo.target.style.color = 'green';
             }
         })
         index.addEventListener('mouseleave', function (alvo) {
             alvo.target.style.fontSize = '20px';
-            if (alvo.target.style.color === 'green'){
+            if (alvo.target.style.color === 'green') {
                 alvo.target.style.color = '';
             }
         })
@@ -124,7 +124,7 @@ zoomDias();
 
 // Ex 7
 
-function adicionaTarefa(tarefa){
+function adicionaTarefa(tarefa) {
     let meuSpan = document.createElement('span');
     let recebeSpan = document.querySelector('.my-tasks');
     meuSpan.innerHTML = tarefa;
@@ -134,7 +134,7 @@ adicionaTarefa('cozinhar');
 
 // Ex 8
 
-function criaLegendaCor(cor){
+function criaLegendaCor(cor) {
     let minhaDiv = document.createElement('div');
     let recebeSpan = document.querySelector('.my-tasks');
     minhaDiv.className = 'task';
@@ -145,12 +145,12 @@ criaLegendaCor('blue');
 
 // Ex 9
 
-function selecionaTarefa(){
+function selecionaTarefa() {
     let tarefa = document.getElementsByClassName('task');
     for (let index of tarefa) {
         index.addEventListener('click', function (alvo) {
             console.log(index.classList);
-            if (index.className === 'task selected'){
+            if (index.className === 'task selected') {
                 alvo.target.classList.remove('selected');
             } else {
                 alvo.target.classList.add('selected');
@@ -169,11 +169,10 @@ function corCompromissoDia() {
         index.addEventListener('click', function (alvo) {
             let corCompromissoSelecionado = document.querySelector('.selected');
             let corDia;
-            console.log('>>>>>>>'+corCompromissoSelecionado);
-            if (corCompromissoSelecionado !== null){
+            if (corCompromissoSelecionado !== null) {
                 corDia = corCompromissoSelecionado.style.backgroundColor;
             }
-            if (alvo.target.style.color !== corDia){
+            if (alvo.target.style.color !== corDia) {
                 alvo.target.style.color = corDia;
             } else {
                 alvo.target.style.color = '';
@@ -183,4 +182,32 @@ function corCompromissoDia() {
 };
 corCompromissoDia();
 
+// Bônus
+
+function acionaEntrada() {
+    let botao = document.getElementById('btn-add');
+    botao.addEventListener('click', function (e) {
+        let caixaEntrada = document.getElementById('task-input').value;
+        console.log(caixaEntrada);
+        criaNovoCompromisso();
+    })
+    document.addEventListener('keyup', function (event) {
+        let tecla = event.key;
+        if (tecla === 'Enter'){
+            criaNovoCompromisso();
+        }
+    })
+};
+acionaEntrada();
+
+function criaNovoCompromisso() {
+
+    let criaLi = document.createElement('li');
+    let caixaEntrada = document.getElementById('task-input').value;
+    if (caixaEntrada !== '') {
+        criaLi.innerText = caixaEntrada;
+        document.querySelector('.task-list').appendChild(criaLi);
+        document.getElementById('task-input').value = '';
+    }
+};
 
