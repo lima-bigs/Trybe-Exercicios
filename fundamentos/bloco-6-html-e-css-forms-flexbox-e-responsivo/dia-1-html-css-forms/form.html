@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +8,56 @@
     <link rel="stylesheet" href="/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <h1>Trybe Trip</h1>
     </header>
     <main>
-    <form action="" method="get">
+        <form action="" method="get">
 
-<label for="full-name">Nome:</label>
-<input type="text" id="full-name">
+            <label for="full-name">Nome:</label>
+            <input type="text" id="full-name">
 
-<label for="input-email">Nome:</label>
-<input type="email" id="input-email">
+            <label for="input-email">E-mail:</label>
+            <input type="email" id="input-email">
 
-<fieldset id="opcoes">
-    <legend>Escolha seu destino</legend>
-    <label for="campo">
-        <input type="radio" name="trip-option" id="campo" value="campo">Campo
-    </label>
-    <label for="cidade">
-        <input type="radio" name="trip-option" id="cidade" value="cidade">Cidade
-    </label>
-    <label for="praia">
-        <input type="radio" name="trip-option" id="praia" value="praia">Praia
-    </label>
-    <label for="montanha">
-        <input type="radio" name="trip-option" id="montanha" value="montanha">Montanha
-    </label>
-</fieldset>
+            <fieldset id="opcoes">
+                <legend>Escolha seu destino</legend>
+                <label for="campo">
+                    <input type="radio" name="trip-option" id="campo" value="campo">Campo
+                </label>
+                <label for="cidade">
+                    <input type="radio" name="trip-option" id="cidade" value="cidade">Cidade
+                </label>
+                <label for="praia">
+                    <input type="radio" name="trip-option" id="praia" value="praia">Praia
+                </label>
+                <label for="montanha">
+                    <input type="radio" name="trip-option" id="montanha" value="montanha">Montanha
+                </label>
+            </fieldset>
 
-<label for="resposta">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
-<textarea name="my-anser" id="resposta" cols="30" rows="10"></textarea>
+            <label for="resposta">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+                TrybeTrip?</label>
+            <textarea name="my-anser" id="resposta" cols="30" rows="10"></textarea>
+            <br>
+            <label for="data">Qual a melhor data para realizar sua viagem?</label>
+            <input type="date" name="data" id="data">
+            <br>
+            <label for="oportunidades">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+            <input type="checkbox" name="oportunidades" id="oportunidades">
+            <br>
+            <label for="concordo">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos
+                futuros</label>
+            <input type="checkbox" name="concordo" id="concordo">
+            <br>
+            <button type="submit" id="btn-enviar">Enviar</button>
+            <button type="reset">Apagar</button>
 
-
-    </form>
-</main>
-<script src="/script.js"></script>    
+        </form>
+    </main>
+    <script src="/script.js"></script>
 </body>
+
 </html>
