@@ -25,6 +25,7 @@
   .menu-container {
     display: flex;
     flex-basis: 268px;
+    flex-grow: 1;
   }
   
   .menu-container ul {
