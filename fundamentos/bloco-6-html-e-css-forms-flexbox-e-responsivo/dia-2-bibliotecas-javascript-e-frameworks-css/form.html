@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="display-4 text-center">Trybe Trip</h1>
+    </header>
+    <main class="container">
+        <form action="" method="get">
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+            <label for="full-name" class="input-group-text">Nome:</label>
+        </div>
+            <input type="text" id="full-name">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+        <label for="input-email" class="input-group-text">E-mail:</label>
+    </div>
+    <input type="email" id="input-email">
+        </div>
+
+            <fieldset id="opcoes" class="form-check form-check-inline">
+                <legend>Escolha seu destino</legend>
+                <div class="form-check form-check-inline">
+                <label for="campo" class="form-check-label">
+                    <input type="radio" class="form-check-input" name="trip-option" id="campo" value="campo">Campo
+                </label>
+            </div>
+                <div class="form-check form-check-inline">
+                <label for="cidade" class="form-check-label">
+                    <input type="radio" class="form-check-input" name="trip-option" id="cidade" value="cidade">Cidade
+                </label>
+            </div>
+                <div class="form-check form-check-inline">
+                <label for="praia" class="form-check-label">
+                    <input type="radio" class="form-check-input" name="trip-option" id="praia" value="praia">Praia
+                </label>
+            </div>
+                <div class="form-check form-check-inline">
+                <label for="montanha" class="form-check-label">
+                    <input type="radio" class="form-check-input" name="trip-option" id="montanha" value="montanha">Montanha
+                </label>
+            </div>
+            </fieldset>
+
+            <label for="resposta">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+                TrybeTrip?</label>
+            <textarea name="my-anser" id="resposta" cols="30" rows="10"></textarea>
+            <br>
+            <label for="data">Qual a melhor data para realizar sua viagem?</label>
+            <input type="date" name="data" id="data">
+            <br>
+            <label for="oportunidades" class="form-check-label">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+            <input type="checkbox" class="form-check-input" name="oportunidades" id="oportunidades">
+            <br>
+            <label for="concordo" class="form-check-label">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos
+                futuros</label>
+            <input type="checkbox" class="form-check-input" name="concordo" id="concordo">
+            <br>
+            <button type="submit" id="btn-enviar">Enviar</button>
+            <button type="reset">Apagar</button>
+
+        </form>
+    </main>
+    <script src="/script.js"></script>
+</body>
+
+</html>
