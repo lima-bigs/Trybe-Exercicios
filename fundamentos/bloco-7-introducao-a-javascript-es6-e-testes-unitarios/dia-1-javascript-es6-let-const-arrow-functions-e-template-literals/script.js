@@ -69,3 +69,20 @@
 
 // const factorial = number => number > 1 ? number * factorial(number - 1) : 1;
 // console.log(factorial(5));
+
+// Ex 2
+
+const longestWord = (frase) => {
+  const array = frase.split(' ');
+  let palavra = array[0];
+  for (let index of array){
+    if (index.length > palavra.length){
+      palavra = index;
+    }
+  }
+  return palavra;
+}
+
+console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'))
+ // retorna 'aconteceu'
+
