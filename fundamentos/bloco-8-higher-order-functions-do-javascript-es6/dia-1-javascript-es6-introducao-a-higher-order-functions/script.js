@@ -82,3 +82,30 @@ const mage = {
   };
   
   const battleMembers = { mage, warrior, dragon };
+
+  const danoDragon = (dragon) => {
+    return Math.floor(Math.random()*(dragon.strength - 15 + 1) + 15);
+  }
+
+  const danoWarrior = (warrior) => {
+    return Math.floor(Math.random()*(warrior.strength * warrior.weaponDmg - warrior.strength + 1) + warrior.strength);
+  }
+
+const magoDanoMana = (mage) => {
+    const danoTurno = 0;
+    const manaTurno = 0;
+    if (mage.mana >= 15) {
+        danoTurno = Math.floor(Math.random()*(mage.intelligence * 2 - mage.intelligence + 1) + mage.intelligence);
+        const manaTurno = 15;
+    } else {
+        const danoTurno = "Não possui mana suficiente";
+        const manaTurno = 0;
+    }
+}
+
+  console.log(danoDragon(dragon));
+  console.log(danoWarrior(warrior));
+
+  const gameActions = {
+
+  };
