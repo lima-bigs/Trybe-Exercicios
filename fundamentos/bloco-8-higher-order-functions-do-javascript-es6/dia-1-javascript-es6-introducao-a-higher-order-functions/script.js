@@ -34,27 +34,51 @@
 
 // resultado(2, checaSorteio);
 
-// Ex 3
+// // Ex 3
 
-    const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
-const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+//     const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+// const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const corrigeProva = (gabarito, respostas, checaRespostas) => {
-    return `Sua nota foi ${checaRespostas(gabarito, respostas)}`
-}
+// const corrigeProva = (gabarito, respostas, checaRespostas) => {
+//     return `Sua nota foi ${checaRespostas(gabarito, respostas)}`
+// }
 
-const checaRespostas = (gabarito, respostas) => {
-    let counter = 0;
-    for (let index = 0; index < gabarito.length; index += 1) {
-        if (respostas[index] !== 'N.A') {
-            if (respostas[index] === gabarito[index]) {
-                counter += 1;
-            } else {
-                counter -= 0.5;
-            }
-        }
-    }
-    return counter;
-}
+// const checaRespostas = (gabarito, respostas) => {
+//     let counter = 0;
+//     for (let index = 0; index < gabarito.length; index += 1) {
+//         if (respostas[index] !== 'N.A') {
+//             if (respostas[index] === gabarito[index]) {
+//                 counter += 1;
+//             } else {
+//                 counter -= 0.5;
+//             }
+//         }
+//     }
+//     return counter;
+// }
 
-console.log(corrigeProva(RIGHT_ANSWERS, STUDENT_ANSWERS, checaRespostas));
+// console.log(corrigeProva(RIGHT_ANSWERS, STUDENT_ANSWERS, checaRespostas));
+
+// Ex Bônus Parte 1 ex1
+
+const mage = {
+    healthPoints: 130,
+    intelligence: 45,
+    mana: 125,
+    damage: undefined,
+  };
+  
+  const warrior = {
+    healthPoints: 200,
+    strength: 30,
+    weaponDmg: 2,
+    damage: undefined,
+  };
+  
+  const dragon = {
+    healthPoints: 350,
+    strength: 50,
+    damage: undefined,
+  };
+  
+  const battleMembers = { mage, warrior, dragon };
