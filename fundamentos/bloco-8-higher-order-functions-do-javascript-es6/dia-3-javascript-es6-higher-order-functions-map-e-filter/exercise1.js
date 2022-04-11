@@ -20,7 +20,7 @@ const books = [
       releaseYear: 1954,
     },
     {
-      id: 3,
+      id: 9,
       name: 'Fundação',
       genre: 'Ficção Científica',
       author: {
@@ -67,13 +67,19 @@ const books = [
 
 //   console.log(arrayLivros(books));
 
-    // const novaLista = books.map((livro) => {idade: (livro.releaseYear - livro.author.birthYear), autor: livro.author.name}).sort();
-//     const novaLista = books.map((livro) => `idade: ${(livro.releaseYear - livro.author.birthYear)}, autor: ${livro.author.name}`).sort();
+    // const novaLista = books.map((livro) => ({idade: (livro.releaseYear - livro.author.birthYear), autor: livro.author.name})).sort();
+    // const novaLista = books.map((livro) => `idade: ${(livro.releaseYear - livro.author.birthYear)}, autor: ${livro.author.name}`).sort();
 
 // console.log(novaLista);
 
 // Ex 3
 
-const ficcaoFantasia = books.filter((livro)=> livro.genre === 'Fantasia' || livro.genre === 'Ficção Científica');
+// const ficcaoFantasia = books.filter((livro)=> livro.genre === 'Fantasia' || livro.genre === 'Ficção Científica');
 
-console.log(ficcaoFantasia);
+// console.log(ficcaoFantasia);
+
+//Ex 4
+
+const maisAntigos = books.filter((livro)=> {
+    return livro.releaseYear < 2022 - 60
+}).sort((livro1,livro2)=>livro1.releaseYear-livro2.releaseYear);
