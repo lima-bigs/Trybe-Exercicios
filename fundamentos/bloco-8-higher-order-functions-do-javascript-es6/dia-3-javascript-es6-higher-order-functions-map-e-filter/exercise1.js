@@ -63,6 +63,17 @@ const books = [
   
   // Ex 1
 
-  const arrayLivros = (livros) => livros.map((livro) => `${livro.name} - ${livro.genre} - ${livro.author.name}`);
+//   const arrayLivros = (livros) => livros.map((livro) => `${livro.name} - ${livro.genre} - ${livro.author.name}`);
 
-  console.log(arrayLivros(books));
+//   console.log(arrayLivros(books));
+
+    // const novaLista = books.map((livro) => {idade: (livro.releaseYear - livro.author.birthYear), autor: livro.author.name}).sort();
+//     const novaLista = books.map((livro) => `idade: ${(livro.releaseYear - livro.author.birthYear)}, autor: ${livro.author.name}`).sort();
+
+// console.log(novaLista);
+
+// Ex 3
+
+const ficcaoFantasia = books.filter((livro)=> livro.genre === 'Fantasia' || livro.genre === 'Ficção Científica');
+
+console.log(ficcaoFantasia);
