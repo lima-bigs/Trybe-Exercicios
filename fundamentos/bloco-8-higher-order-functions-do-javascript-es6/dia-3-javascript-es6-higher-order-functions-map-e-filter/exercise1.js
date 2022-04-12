@@ -68,7 +68,6 @@ const books = [
 //   console.log(arrayLivros(books));
 
     // const novaLista = books.map((livro) => ({idade: (livro.releaseYear - livro.author.birthYear), autor: livro.author.name})).sort();
-    // const novaLista = books.map((livro) => `idade: ${(livro.releaseYear - livro.author.birthYear)}, autor: ${livro.author.name}`).sort();
 
 // console.log(novaLista);
 
@@ -80,6 +79,27 @@ const books = [
 
 //Ex 4
 
-const maisAntigos = books.filter((livro)=> {
-    return livro.releaseYear < 2022 - 60
-}).sort((livro1,livro2)=>livro1.releaseYear-livro2.releaseYear);
+// const maisAntigos = books.filter((livro)=> {
+//     return livro.releaseYear < 2022 - 60
+// }).sort((livro1,livro2)=>livro1.releaseYear-livro2.releaseYear);
+
+// Ex 5
+
+// const ficcaoFantasia = books.filter((livro)=> livro.genre === 'Fantasia' || livro.genre === 'Ficção Científica');
+// const listaAutores = ficcaoFantasia.map((autor)=> autor.author.name);
+// console.log(listaAutores.sort());
+
+// Ex 6
+
+// const ficcaoFantasia = books.filter((livro)=> livro.releaseYear < 2022 - 60);
+// const listaAntigos = ficcaoFantasia.map((titulo)=> titulo.name);
+// console.log(listaAntigos);
+
+// Ex 7
+
+function authorWith3DotsOnName() {
+  // escreva seu código aqui
+  const autor3Iniciais = books.filter((book) => book.author.name[1] === "." && book.author.name[4] === "." && book.author.name[7] === ".");
+  return autor3Iniciais[0].name;
+  }
+  console.log(authorWith3DotsOnName(books)); 
