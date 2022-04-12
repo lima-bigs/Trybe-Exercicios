@@ -77,8 +77,8 @@ const books = [
   
 // // Ex 2
 
-const reduceNames = books.reduce((acumulador, elemento)=> {
-    acumulador + `${elemento.author.name}, `,'';
-    return
-})
+const reduceNames = books.reduce((acumulador, elemento, index, array)=> {
+    return index < array.length -1 ? acumulador + `${elemento.author.name}, `: acumulador + `${elemento.author.name}.`;
+},'');
 console.log(reduceNames);
+
