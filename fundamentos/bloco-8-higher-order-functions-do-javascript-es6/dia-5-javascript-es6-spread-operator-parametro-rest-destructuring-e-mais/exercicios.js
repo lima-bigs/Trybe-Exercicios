@@ -132,8 +132,20 @@
 
 // Ex 8
 
-const greet = (person, greeting = 'Hi') => `${greeting} ${person}`;
+// const greet = (person, greeting = 'Hi') => `${greeting} ${person}`;
 
-console.log(greet('John')) // 'Hi John'
-console.log(greet('John', 'Good morning')) // 'Good morning John'
-console.log(greet('Isabela', 'Oi')) // 'Oi Isabela'
+// console.log(greet('John')) // 'Hi John'
+// console.log(greet('John', 'Good morning')) // 'Good morning John'
+// console.log(greet('Isabela', 'Oi')) // 'Oi Isabela'
+
+// Ex 9
+
+
+const yearSeasons = {
+  spring: ['March', 'April', 'May'],
+  summer: ['June', 'July', 'August'],
+  autumn: ['September', 'October', 'November'],
+  winter: ['December', 'January', 'February'],
+};
+
+// const
