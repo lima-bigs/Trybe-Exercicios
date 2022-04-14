@@ -43,37 +43,63 @@
 
 // Ex 4
 
-const people = [
-    {
-        name: 'Nicole',
-        bornIn: 1992,
-        nationality: 'Australian',
-    },
-    {
-        name: 'Harry',
-        bornIn: 2008,
-        nationality: 'Australian',
-    },
-    {
-        name: 'Toby',
-        bornIn: 1901,
-        nationality: 'Australian',
-    },
-    {
-        name: 'Frida',
-        bornIn: 1960,
-        nationality: 'Dannish',
-    },
-    {
-        name: 'Fernando',
-        bornIn: 2001,
-        nationality: 'Brazilian',
-    },
-];
+// const people = [
+//     {
+//         name: 'Nicole',
+//         bornIn: 1992,
+//         nationality: 'Australian',
+//     },
+//     {
+//         name: 'Harry',
+//         bornIn: 2008,
+//         nationality: 'Australian',
+//     },
+//     {
+//         name: 'Toby',
+//         bornIn: 1901,
+//         nationality: 'Australian',
+//     },
+//     {
+//         name: 'Frida',
+//         bornIn: 1960,
+//         nationality: 'Dannish',
+//     },
+//     {
+//         name: 'Fernando',
+//         bornIn: 2001,
+//         nationality: 'Brazilian',
+//     },
+// ];
 
-const selecionaPessoas = (pessoas) => 
-    pessoas.filter(({ bornIn, nationality }) => bornIn > 1900 && bornIn < 2001 && nationality === 'Australian');
-;
-console.log(selecionaPessoas(people));
+// const selecionaPessoas = (pessoas) => 
+//     pessoas.filter(({ bornIn, nationality }) => bornIn > 1900 && bornIn < 2001 && nationality === 'Australian');
+// ;
+// console.log(selecionaPessoas(people));
 
-  // escreva filterPeople abaixo
+  // Ex 5
+
+//   const myList = [1, 2, 3];
+
+// const [c, b, a] = myList;
+
+// console.log([a, b, c]);
+
+// Ex 6
+
+const palio = ['Palio', 'Fiat', 2019];
+const shelbyCobra = ['Shelby Cobra', 'Ford', 1963];
+const chiron = ['Chiron', 'Bugatti', 2016];
+
+// escreva toObject abaixo
+
+const toObject = ([nome, marca, ano]) => {
+  return {
+    nome,
+    marca,
+    ano,
+  };
+};
+
+console.log(toObject(palio));
+console.log(toObject(shelbyCobra));
+console.log(toObject(chiron));
