@@ -104,30 +104,36 @@
 
 // Ex 7
 
-const ships = [
-  {
-    name: 'Titanic',
-    length: 269.1,
-    measurementUnit: 'meters',
-  },
-  {
-    name: 'Queen Mary 2',
-    length: 1132,
-    measurementUnit: 'feet',
-  },
-  {
-    name: 'Yamato',
-    length: 256,
-    measurementUnit: 'meters',
-  },
-];
+// const ships = [
+  // {
+    // name: 'Titanic',
+    // length: 269.1,
+    // measurementUnit: 'meters',
+  // },
+  // {
+    // name: 'Queen Mary 2',
+    // length: 1132,
+    // measurementUnit: 'feet',
+  // },
+  // {
+    // name: 'Yamato',
+    // length: 256,
+    // measurementUnit: 'meters',
+  // },
+// ];
+// 
+// const shipLength = ({name, length, measurementUnit}) => {
+  // return `${name} is ${length} ${measurementUnit} long`;
+// }
+// 
+// console.log(shipLength(ships[0])); // 'Titanic is 269.1 meters long'
+// console.log(shipLength(ships[1])); // 'Queen Mary 2 is 1132 feet long'
+// // console.log(shipLength(ships[2])); // 'Yamato is 256 meters long'
 
-const shipLength = ({name, length, measurementUnit}) => {
-  return `${name} is ${length} ${measurementUnit} long`;
-}
+// Ex 8
 
-// escreva shipLength abaixo
+const greet = (person, greeting = 'Hi') => `${greeting} ${person}`;
 
-console.log(shipLength(ships[0])); // 'Titanic is 269.1 meters long'
-console.log(shipLength(ships[1])); // 'Queen Mary 2 is 1132 feet long'
-console.log(shipLength(ships[2])); // 'Yamato is 256 meters long'
+console.log(greet('John')) // 'Hi John'
+console.log(greet('John', 'Good morning')) // 'Good morning John'
+console.log(greet('Isabela', 'Oi')) // 'Oi Isabela'
