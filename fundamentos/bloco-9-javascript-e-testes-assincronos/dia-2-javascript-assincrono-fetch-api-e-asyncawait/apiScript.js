@@ -1,4 +1,4 @@
-const { Response } = require("node-fetch");
+// const { Response } = require("node-fetch");
 
 // apiScript.js
 const API_URL = 'https://icanhazdadjoke.com/';
@@ -13,4 +13,4 @@ const fetchJoke = () => {
     .then(data => console.log(data));
 };
 
-window.onload = fetchJoke();
+window.onload = () => fetchJoke();
